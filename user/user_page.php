@@ -77,7 +77,7 @@ if (!$_SESSION["UserID"]){
                 
               </div>
               <div class="col-md-1">
-              <?php if($post[4] == $_SESSION['UserID']){?>
+              <?php if($post[3] == $_SESSION['UserID']){?>
                 <a href="./del_post.php?id=<?php echo $post[0]?>">
                   <i class="fas fa-trash-alt"></i>
                 </a>
