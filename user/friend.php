@@ -48,7 +48,7 @@ include("../connection.php");
                                 <img src="../pic/<?php echo $row4[4] ?>" class="card-img-top" alt="..." style="width:200px;height:200px">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $row4[1] ?></h5>
-                                    <a href="./cancel.php?id_user=<?php echo $_SESSION['UserID'] ?>&id_friend=<?php echo $row3['id_friend'] ?>&id=<?php echo $row3['id'] ?>" class="btn btn-primary">ยกเลิกคำขอ</a>
+                                    <a href="./cancel.php?id_user=<?php echo $_SESSION['UserID'] ?>&id_friend=<?php echo $row3['id_friend'] ?>&id=<?php echo $row3['id'] ?>" class="btn btn-secondary">ยกเลิกคำขอ</a>
                                 </div>
                             </div>
                         <?php }?>
@@ -85,7 +85,7 @@ include("../connection.php");
                 <div class="card">
                     <div class="card-body">
                         <?php
-                        $all_user = "SELECT * FROM `firend` WHERE `id_user` = '$_SESSION[UserID]' AND (`status` = 1 OR `status` = 2)";
+                        $all_user = "SELECT * FROM `firend` WHERE `id_user` = '$_SESSION[UserID]' AND (`status` = 2 OR `status` = 4 OR `status` = 1)";
                         $query = mysqli_query($con, $all_user);
                         $firend_all = [];
                         while ($row = mysqli_fetch_array($query)) {

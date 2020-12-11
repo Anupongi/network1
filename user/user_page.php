@@ -115,8 +115,8 @@ if (!$_SESSION["UserID"]){
                   <form action="add_comment.php" method="post">
                     <div class="row">
                         <input type="hidden" name="post_id" value="<?php echo $post[0]?>">
-                        <div class="col-9" md="9"><input type="text" class="form-control" name="comment"></div>
-                        <div class="col-3" md="3"><button type="submit" class="btn btn-primary">comment</button></div>
+                        <div class="col-md-9" ><input type="text" class="form-control" name="comment"></div>
+                        <div class="col-md-3" ><button type="submit" class="btn btn-primary">comment</button></div>
                     </div>
                   </form>
                   <hr>
@@ -131,14 +131,14 @@ if (!$_SESSION["UserID"]){
                   <div class="card m-3">
                     <div class="card-body">
                     <div class="row">
-                        <div class="col-2" md="2">
+                        <div class="col-md-2">
                           <img src="../pic/<?php echo $user1[4]?>" alt="" class="rounded-circle" style="width:50px;height:50px">
                         </div>
-                        <div class="col-8" md="8">
+                        <div class="col-md-7">
                           <div class="row"><b><?php echo $user1[1]?></b></div>
                           <div class="row"><p><?php echo $post[4]?></p></div>
                         </div>
-                        <div class="col-1" md="1">
+                        <div class="col-md-1">
                           <?php if($row2[2] == $_SESSION["UserID"]) {?>
                             <a href="./del_comment.php?id=<?php echo $row2[0]?>">
                               <i class="fas fa-trash-alt"></i>
